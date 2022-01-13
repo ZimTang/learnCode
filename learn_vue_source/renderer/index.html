@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./renderer.js"></script>
+    <script>
+      // 1.通过h函数创建vnode
+      const vnode = h("div", { class: "title" }, [
+        h("h2", null, "counter: 10"),
+        h("button", null, "+1"),
+      ]);
+      mount(vnode, document.querySelector("#app"));
+
+      const vnode1 = h("div", { class: "name", id: "aaa" }, [
+        h("h2", null, "counter: 9"),
+        h("button", null, "-1"),
+      ]);
+    </script>
+  </body>
+</html>
