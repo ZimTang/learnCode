@@ -21,6 +21,10 @@
         h("h2", null, "counter: 9"),
         h("button", null, "-1"),
       ]);
+
+      setTimeout(() => {
+        patch(vnode, vnode1);
+      }, 1000);
     </script>
   </body>
 </html>

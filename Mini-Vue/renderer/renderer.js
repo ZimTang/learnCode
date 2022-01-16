@@ -32,7 +32,7 @@ const mount = (vnode, container) => {
     });
   }
 
-  // mount on container
+  // 4. mount on container
   container.appendChild(el);
 };
 
@@ -55,8 +55,10 @@ const patch = (n1, n2) => {
       // diff propsValue
       if (newValue !== oldValue) {
         if (typeof newValue === "string") {
+          // string
           el.setAttribute(key, newValue);
         } else {
+          // event
           el.addEventListener(key.slice(2).toLowerCase(), newValue);
         }
       }
